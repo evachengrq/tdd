@@ -41,4 +41,15 @@ public class MommifierTest {
         Assertions.assertEquals(result, "abcdefghij");
     }
 
+    @Test
+    void should_return_itself_when_input_has_no_continuous_vowels() {
+        //Given
+        Mommifier mommifier = new Mommifier();
+        String input = "Eva";
+        //When
+        String result = Mommifier.convert(input);
+        //Then
+        Assertions.assertEquals(result, "Eva");
+    }
+
 }

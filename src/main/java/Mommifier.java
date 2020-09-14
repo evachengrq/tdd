@@ -9,7 +9,16 @@ public class Mommifier {
         if (numberOfVowels <= inputLength * 0.3) {
             return input;
         }
+        if (hasNoContinuousVowels(input)) return input;
         return null;
+    }
+
+    private static boolean hasNoContinuousVowels(String input) {
+        if (!input.contains("aa") && !input.contains("ee") && !input.contains("ii")
+                && !input.contains("oo") && !input.contains("uu")) {
+            return true;
+        }
+        return false;
     }
 
     private static int getNumbersOfVowels(String input, int inputLength) {
