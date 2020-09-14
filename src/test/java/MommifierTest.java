@@ -52,10 +52,10 @@ public class MommifierTest {
     @Test
     void should_mommify_when_30_percent_of_vowels_and_continuous_vowels_are_present() {
         //Given
-        String input = "keep";
+        String input = "keeps";
         //When
         String result = Mommifier.convert(input);
         //Then
-        Assertions.assertEquals(result, "kemommyep");
+        Assertions.assertEquals(result, "kemommyeps");
     }
 }
