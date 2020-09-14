@@ -11,4 +11,11 @@ public class MommifierTest {
         });
     }
 
+    @Test
+    void should_throw_when_input_is_empty() {
+        Assertions.assertThrows(Exception.class, () -> {
+            Mommifier.convert("");
+        });
+    }
+
 }
