@@ -30,4 +30,15 @@ public class MommifierTest {
         Assertions.assertEquals(result, "hyphen");
     }
 
+    @Test
+    void should_return_itself_if_input_has_30_percent_of_vowels() {
+        //Given
+        Mommifier mommifier = new Mommifier();
+        String input = "abcdefghij";
+        //When
+        String result = Mommifier.convert(input);
+        //Then
+        Assertions.assertEquals(result, "abcdefghij");
+    }
+
 }

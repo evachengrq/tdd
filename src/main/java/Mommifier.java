@@ -6,10 +6,9 @@ public class Mommifier {
 
         int inputLength = input.length();
         int numberOfVowels = getNumbersOfVowels(input, inputLength);
-        if (numberOfVowels < inputLength * 0.3) {
+        if (numberOfVowels <= inputLength * 0.3) {
             return input;
         }
-
         return null;
     }
 
